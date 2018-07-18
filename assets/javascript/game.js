@@ -1,31 +1,48 @@
 // pick a theme
 // Week days hahahah, ill cahnge it if i get it anywhere near functional
-// Array of words 
-var wordArray = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday" ];
-var gameWord = wordArray[Math.floor(Math.random() * wordArray.length)];
 
-console.log(gameWord);
+// Array of words 
+var wordArray = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
+
 
 
 var wins = 0;
+
 var losses = 0;
 
-
-
-// ill need a function that wraps everthing kind of like in the other game 
 document.onkeyup = function(event) {
-    var html = 
-    "<p>Wins: " + gameWord + "</p>" 
 
-    document.querySelector("#game").innerHTML = html;
+    var userChoice = event.key;
+
+    var gameWord = wordArray[Math.floor(Math.random() * wordArray.length)];
+    
+    // var s = "overpopulation";
+    // for (var i = 0; i < s.length; i++) {
+    //     console.log(s.charAt(i));
+    // }
+    var gameWordArray = ("");
+    // gameWordArray.push
+    for (i = 0; i < gameWord.length; i++) {
+        console.log(gameWord.charAt(i));
+    };
+
+
+    // console.log(gameWordArray)
+
+    console.log(gameWord);
+
+    console.log(userChoice);
+
+    // var html =
+    // "<p>Wins: " + gameWord + "</p>"
+    
+    // document.querySelector("#game").innerHTML = html; 
 };
-// // Create a variable for computerChoice 
-// document.onkeyup = function (event) {
 
-//     var computerChoice = computerChoices[Math.floor(Math.random() * computerChoices.length)];
-//     // var for useerChoice
-//     var userChoice = event.key;
-//     console.log(userChoice);
+
+//     // Re-write the html to reflect game info
+
+
 //     // if statements to compare userChoice to computerchoice
 //     // What happenes if they are ===
 //     if (userChoice === computerChoice) {
@@ -46,12 +63,6 @@ document.onkeyup = function(event) {
 //         guessesLeft = 9;
 //         guessesSoFar = [];
 //     }
-
-
-//     // Re-write the html to reflect game info
-//    
-
-
 // };
 // // Press any key to get started!
 
